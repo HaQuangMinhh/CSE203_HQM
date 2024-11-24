@@ -1,0 +1,4 @@
+Hello, This is a first content in MinhContent.txt
+
+File encryption is the science of writing the contents of a file in a secret code. Your encryption program should 
+work like a filter, reading the contents of one file, modifying the data  into a code,
