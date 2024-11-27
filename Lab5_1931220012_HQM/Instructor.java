@@ -1,71 +1,74 @@
-
-import java.util.Objects;
-
 public class Instructor {
 
-    private String LastName;
-    private String FirstName;
-    private String OfficeNumber;
+    private String FirstName; 
+    private String LastName ; 
+    private int OfficeNumber ;
+    
 
-    public Instructor(String firstName, String lastName, String officeNumber) {
-        this.FirstName = firstName;
-        this.LastName = lastName;
-        this.OfficeNumber = officeNumber;
+    public Instructor(String firstName, String lastName, int officeNumber) {
+        FirstName = firstName;
+        LastName = lastName;
+        OfficeNumber = officeNumber;
     }
-
-    // Use Equal method
-    public String getLastName() {
-        return LastName;
-    }
-
-    public void setLastName(String LastName) {
-        this.LastName = LastName;
-    }
-
+    
     public String getFirstName() {
         return FirstName;
     }
-
-    public void setFirstName(String FirstName) {
-        this.FirstName = FirstName;
+    public void setFirstName(String firstName) {
+        FirstName = firstName;
     }
-
-    public String getOfficeNumber() {
+    public String getLastName() {
+        return LastName;
+    }
+    public void setLastName(String lastName) {
+        LastName = lastName;
+    }
+    public int getOfficeNumber() {
         return OfficeNumber;
     }
-
-    public void setOfficeNumber(String OfficeNumber) {
-        this.OfficeNumber = OfficeNumber;
+    public void setOfficeNumber(int officeNumber) {
+        OfficeNumber = officeNumber;
     }
-
+    
+    
+    
+    
+    
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 59 * hash + Objects.hashCode(this.LastName);
-        hash = 59 * hash + Objects.hashCode(this.FirstName);
-        hash = 59 * hash + Objects.hashCode(this.OfficeNumber);
-        return hash;
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((FirstName == null) ? 0 : FirstName.hashCode());
+        result = prime * result + ((LastName == null) ? 0 : LastName.hashCode());
+        result = prime * result + OfficeNumber;
+        return result;
+    }
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Instructor other = (Instructor) obj;
+        if (FirstName == null) {
+            if (other.FirstName != null)
+                return false;
+        } else if (!FirstName.equals(other.FirstName))
+            return false;
+        if (LastName == null) {
+            if (other.LastName != null)
+                return false;
+        } else if (!LastName.equals(other.LastName))
+            return false;
+        if (OfficeNumber != other.OfficeNumber)
+            return false;
+        return true;
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Instructor other = (Instructor) obj;
-        if (!Objects.equals(this.LastName, other.LastName)) {
-            return false;
-        }
-        if (!Objects.equals(this.FirstName, other.FirstName)) {
-            return false;
-        }
-        return Objects.equals(this.OfficeNumber, other.OfficeNumber);
+    public String toString() {
+        return "Instructor Class: [FirstName= " + FirstName + ", LastName= " + LastName + ", OfficeNumber= " + OfficeNumber + "]";
     }
-
 }
