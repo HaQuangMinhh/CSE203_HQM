@@ -1,0 +1,2 @@
+NonPerishableItem|Rice|20|30000.0
+PerishableItem|Milk|5|50000.0|2024-12-30

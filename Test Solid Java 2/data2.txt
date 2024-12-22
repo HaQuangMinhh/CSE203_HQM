@@ -1,0 +1,5 @@
+Inventory List: 
+Name: Rice, Quantity: 10, Price: 30000.0
+Name: Milk, Quantity: 5, Price: 50000.0
+Name: Laptop, Quantity: 50, Price: 5.0E7
+Name: Phone, Quantity: 10, Price: 6900000.0
